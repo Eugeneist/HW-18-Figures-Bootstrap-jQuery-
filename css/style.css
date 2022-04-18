@@ -13,11 +13,10 @@
 
 .triangle{
     width: 0;
-	height: 0;
+    height: 0;
 	border-left: 100px solid transparent;
 	border-right: 100px solid transparent;
 	border-bottom: 200px solid #555;
-
 }
 
 .container-md{
