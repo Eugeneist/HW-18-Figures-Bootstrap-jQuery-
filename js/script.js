@@ -8,48 +8,23 @@ const select = $(".form-select");
 const color = $(".form-control-color");
 
 
-select.change(e=>{
-
-    if (e.target.value == "square") {
-        figure.fadeOut(0,1);
-        figure.removeClass("triangle");
-        figure.removeClass("circle");
-        figure.addClass("square");
-        figure.fadeIn(3000);
-    } else if (e.target.value == "triangle") {
-        figure.fadeOut(0,1);
-        figure.removeClass("square");
-        figure.removeClass("circle");
-        figure.addClass("triangle");
-        figure.css("background-color", "white");
-        figure.fadeIn(3000);
-    } else if (e.target.value == "circle") {
-        figure.fadeOut(0,1);
-        figure.removeClass("triangle");
-        figure.removeClass("square");
-        figure.addClass("circle");
-        figure.fadeIn(3000);
-    } else{
-        figure.removeClass("triangle");
-        figure.removeClass("circle");
-        figure.removeClass("square");
-    }
-})
-
-color.change(e=>{
-    const triangle = $(".triangle");
+select.change(() => {
     figure.fadeOut(0,1);
-
-    if (figure.hasClass("myfigure triangle")){
-        figure.css("background-color", "white");
-        triangle.css("border-bottom", `200px solid ${e.target.value}`);
-        figure.fadeToggle(2000);
+    if (select.val() == "square") {
+        figure.removeClass().addClass("square");
+    } else if (select.val() == "rectangle") {
+        figure.removeClass().addClass("rectangle");
+    } else if (select.val() == "circle") {
+        figure.removeClass().addClass("circle");
     } else{
-        figure.fadeToggle(2000);
-        figure.css("background-color", e.target.value);
-        figure.css("border-bottom", `200px solid ${e.target.value}`);
+        figure.removeClass();
     }
+    figure.fadeIn(1000);
 })
+
+
+color.on('input', function() { figure.css("background-color", color.val()); });
+
 
 
 // ----- Vanilla JS Version -----
@@ -83,7 +58,7 @@ color.change(e=>{
 // })
 
 
-// color.addEventListener('change', e=>{
+// color.addEventListener('input', e=>{
 
 //     const triangle = document.querySelector(".triangle");
 

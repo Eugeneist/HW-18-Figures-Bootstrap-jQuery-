@@ -2,21 +2,25 @@
     width:200px;
     height:200px;
     border-radius: 50%;
-    background-color: #555;
+    background-color: #FF7100;
 }
 
 .square{
     width:200px;
     height:200px;
-    background-color: #555;
+    background-color: #FF7100;
 }
 
-.triangle{
-    width: 0;
-    height: 0;
-	border-left: 100px solid transparent;
-	border-right: 100px solid transparent;
-	border-bottom: 200px solid #555;
+.rectangle{
+    height: 200px;
+    width: 400px;
+    background-color: #FF7100;
+}
+
+.myfigure{
+    width:200px;
+    height:200px;
+    background-color: #FF7100; 
 }
 
 .container-md{
